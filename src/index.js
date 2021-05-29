@@ -80,5 +80,5 @@ function scroll() {
       behavior: 'smooth',
       block: 'end',
     })
-  }, 200)
+  }, 1000)
 }
