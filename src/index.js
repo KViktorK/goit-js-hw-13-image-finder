@@ -44,6 +44,7 @@ function onLoad() {
     picturesFetchApi.fetchApi().then((data) => {
         createGallery(data);
         showNotification();
+        scroll()
     });
 }
 
@@ -71,4 +72,13 @@ function showNotification() {
         text: 'downloaded succesfully',
         delay: 1500,
         closerHover: true, });
+}
+
+function scroll() {
+  setTimeout(() => {
+    refs.gallery.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+    })
+  }, 200)
 }
